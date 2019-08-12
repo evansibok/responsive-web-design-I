@@ -72,6 +72,20 @@ h1, h2, h3, h4, h5 {
 	color: rgb(27, 27, 27);
 }
 
+@media screen and (max-width: 800px) {
+    .body-con {
+        /* border: 2px solid #254; */
+        width: 750px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .body-con {
+        border: 2px solid #254;
+        width: auto;
+    }
+}
+
  header {
 	display: flex;
 	justify-content: center;
@@ -83,6 +97,14 @@ h1, h2, h3, h4, h5 {
 	display: flex;
 	justify-content: center;
 }
+@media screen and (max-width: 800px) {
+    .nav-con {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+}
 
 nav a {
 	text-decoration: none;
@@ -91,11 +113,42 @@ nav a {
 	color: rgb(39, 38, 38);
 	font-size: 14px;
 }
+@media screen and (max-width: 500px) {
+    header nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+    .nav-con {
+        margin-top: 25px;
+    }
+    nav a {
+        padding: 20px;
+        margin: 0px;
+        border: 1px solid #234;
+    }
+}
 
 .img-div {
 	margin-left: 45px;
 	margin-top: -11px;
 }
+
+@media screen and (max-width: 800px) {
+    .img-div {
+        margin: 0px;
+        margin: 0px;
+        margin-bottom: 35px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .img-div {
+        margin-bottom: 25px;
+    }
+}
+
 
 .main-header {
 	margin-top: 70px;
@@ -110,9 +163,19 @@ nav a {
 	align-items: center;
 	padding-left: 70px;
 }
+@media screen and (max-width: 800px) { 
+    .main-con {
+        padding-left: 0px;
+    }
+}
 
 .main-img {
 	padding-left: 90px;
+}
+@media screen and (max-width: 800px) {
+    .main-img {
+        display: none;
+    }
 }
 
 .main-con h1 {
@@ -136,8 +199,6 @@ nav a {
 }
 
 hr  {
-	margin-right: 0 auto;
-	margin-left: 0 auto;
 	margin-top: 75px;
 	width: 85%;
 }
@@ -151,6 +212,13 @@ hr  {
 	display: flex;
 	justify-content: space-evenly;
 	margin-top: 30px;
+}
+@media screen and (max-width: 500px) {
+    .section1 {
+        display: flex;
+	    justify-content: space-evenly;
+	    margin-top: 30px;
+    }
 }
 
 .section-con p {
@@ -169,6 +237,18 @@ hr  {
 .content-img {
 	margin-top: 25px;
 	text-align: center;
+}
+@media screen and (max-width: 800px) { 
+    .middle-img {
+        width: 650px;
+        height: auto;
+    }
+}
+@media screen and (max-width: 500px) { 
+    .middle-img {
+        width: 450px;
+        height: auto;
+    }
 }
 
 .services {
