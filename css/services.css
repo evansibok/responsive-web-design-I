@@ -1,0 +1,280 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+
+.body-con {
+	margin: 0 auto;
+	/* border: 2px solid #254; */
+	width: 880px;
+	color: rgb(27, 27, 27);
+}
+@media screen and (max-width: 800px) {
+    .body-con {
+        /* border: 2px solid #254; */
+        width: 750px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .body-con {
+        /* border: 2px solid #254; */
+        width: auto;
+    }
+}
+
+ header {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+ }
+
+ .newnav-con {
+	 display: flex;
+	 justify-content: space-between;
+	 align-items: center;
+	 margin-top: 30px;
+ }
+ @media screen and (max-width: 800px) {
+    .newnav-con {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    .logo {
+        margin-bottom: 25px;
+    }
+}
+nav a {
+	text-decoration: none;
+	color: rgb(39, 38, 38);
+	font-size: 16px;
+	margin-right: 56px;
+	font-weight: 500;
+}
+@media screen and (max-width: 500px) {
+    header nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .nav-con {
+        margin-top: 25px;
+    }
+    nav a {
+        margin: 0px;
+        padding: 0px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid rgb(83, 83, 83);
+        text-align: center;
+        font-weight: 600;        
+        color: rgb(83, 83, 83);
+    }
+    nav a.a-services {
+        border-top: 2px solid rgb(83, 83, 83);
+    }
+}
+
+.services-header-img {
+	display: flex;
+	justify-content: center;
+	margin-top: 15px;
+}
+@media screen and (max-width: 500px) {
+    .services-header-img {
+        align-self: center;
+        width: 450px;
+        margin: 0px;
+    }
+}
+
+.servmain-con {
+	margin-top: 33px;
+}
+@media screen and (max-width: 500px) {
+    .servmain-con {
+        margin: 30px;
+        margin-bottom: 0px;
+    }
+}
+
+.servmain-con h1 {
+	font-size: 25px;
+	line-height: 1.3em;
+}
+
+hr {
+	margin-top: 45px;
+	margin-bottom: 0px;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+}
+
+.serv-sec {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 40px;
+}
+
+.serv-des {
+	border: 1px solid rgb(19, 18, 18);
+	background: rgb(224, 224, 224);
+	width: 420px;
+	padding: 20px 40px 20px 20px;
+}
+
+.serv-des p {
+	padding-top: 3px;
+	line-height: 1.3em;
+}
+@media screen and (max-width: 800px) { 
+    .serv-sec {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 0px;
+    }
+    .serv-des {
+        border: 1px solid rgb(19, 18, 18);
+        background: rgb(224, 224, 224);
+        width: auto;
+        padding: 20px 20px 20px 20px;
+        margin-top: 30px;
+    }
+}
+@media screen and (max-width: 500px) { 
+    .serv-sec {
+        display: inherit;
+    }
+    .serv-des {
+        width: 450px;
+        align-self: center;
+    }
+}
+
+.sect-but button {
+	margin-top: 16px;
+	padding: 8px 30px;
+	border: 1px solid rgb(27, 27, 27);
+	border-radius: 4px;
+	background: #fff;
+	font-size: 12px;
+	font-weight: 600;
+	width: 130px;
+	font-family: 'Titillium Web', 'sans-serif';
+} 
+
+hr.edit {
+	margin-top: 36px;
+	margin-bottom: 0px;
+}
+
+.serv-sec-facts {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 40px;
+}
+@media screen and (max-width: 500px) { 
+    .serv-sec-facts {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-top: 40px;
+    }
+}
+.facts-sect {
+	width: 400px;
+}
+@media screen and (max-width: 500px) { 
+    .facts-sect {
+        width: auto;
+        margin: 40px 40px 0px 40px;
+    }
+}
+
+.facts-sect p {
+	padding-top: 6px;
+}
+
+.facts-sect ul {
+	margin: 15px;
+}
+
+.facts-sect ul li {
+	list-style-type: square;
+	padding-top: 18px;
+}
+
+footer {
+	text-align: center;
+	margin-top: 80px;
+	margin-bottom: 20px;
+}
