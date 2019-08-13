@@ -63,15 +63,14 @@ h1, h2, h3, h4, h5 {
     margin-bottom: 15px;
 }
 
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
 
 .body-con {
 	margin: 0 auto;
 	/* border: 2px solid #254; */
-	width: 1020px;
+	width: 880px;
 	color: rgb(27, 27, 27);
 }
-
 @media screen and (max-width: 800px) {
     .body-con {
         /* border: 2px solid #254; */
@@ -92,26 +91,30 @@ h1, h2, h3, h4, h5 {
 	flex-direction: column;
  }
 
-.nav-con {
-	margin-top: 35px;
-	display: flex;
-	justify-content: center;
-}
-@media screen and (max-width: 800px) {
-    .nav-con {
+ .newnav-con {
+	 display: flex;
+	 justify-content: space-between;
+	 align-items: center;
+	 margin-top: 30px;
+ }
+ @media screen and (max-width: 800px) {
+    .newnav-con {
         display: flex;
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
+        margin-bottom: 30px;
+    }
+    .logo {
+        margin-bottom: 25px;
     }
 }
-
 nav a {
 	text-decoration: none;
-	margin-right: 50px;
-	margin-left: 10px;
 	color: rgb(39, 38, 38);
-	font-size: 14px;
+	font-size: 16px;
+	margin-right: 56px;
+	font-weight: 500;
 }
 @media screen and (max-width: 500px) {
     header nav {
@@ -137,190 +140,141 @@ nav a {
     }
 }
 
-.img-div {
-	margin-left: 45px;
-	margin-top: -11px;
-}
-
-@media screen and (max-width: 800px) {
-    .img-div {
-        margin: 0px;
-        margin: 0px;
-        margin-bottom: 35px;
-    }
-}
-@media screen and (max-width: 500px) {
-    .img-div {
-        margin-bottom: 25px;
-    }
-}
-
-
-.main-header {
-	margin-top: 70px;
+.services-header-img {
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	margin-top: 15px;
+}
+@media screen and (max-width: 500px) {
+    .services-header-img {
+        align-self: center;
+        width: 450px;
+        margin: 0px;
+    }
 }
 
-.main-con {
+.servmain-con {
+	margin-top: 33px;
+}
+@media screen and (max-width: 500px) {
+    .servmain-con {
+        margin: 30px;
+        margin-bottom: 0px;
+    }
+}
+
+.servmain-con h1 {
+	font-size: 25px;
+	line-height: 1.3em;
+}
+
+hr {
+	margin-top: 45px;
+	margin-bottom: 0px;
+}
+
+main {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	padding-left: 70px;
+}
+
+.serv-sec {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 40px;
+}
+
+.serv-des {
+	border: 1px solid rgb(19, 18, 18);
+	background: rgb(224, 224, 224);
+	width: 420px;
+	padding: 20px 40px 20px 20px;
+}
+
+.serv-des p {
+	padding-top: 3px;
+	line-height: 1.3em;
 }
 @media screen and (max-width: 800px) { 
-    .main-con {
-        padding-left: 0px;
+    .serv-sec {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 0px;
+    }
+    .serv-des {
+        border: 1px solid rgb(19, 18, 18);
+        background: rgb(224, 224, 224);
+        width: auto;
+        padding: 20px 20px 20px 20px;
+        margin-top: 30px;
+    }
+}
+@media screen and (max-width: 500px) { 
+    .serv-sec {
+        display: inherit;
+    }
+    .serv-des {
+        width: 450px;
+        align-self: center;
     }
 }
 
-.main-img {
-	padding-left: 90px;
-}
-@media screen and (max-width: 800px) {
-    .main-img {
-        display: none;
-    }
-}
-
-.main-con h1 {
-	text-align: center;
-	font-size: 80px;
-	letter-spacing: 1.2px;
-}
-
-.main-con a button {
-	padding: 6px 30px;
+.sect-but button {
+	margin-top: 16px;
+	padding: 8px 30px;
 	border: 1px solid rgb(27, 27, 27);
-	background: transparent;
-	font-size: 16px;
+	border-radius: 4px;
+	background: #fff;
+	font-size: 12px;
 	font-weight: 600;
-	width: 170px;
+	width: 130px;
 	font-family: 'Titillium Web', 'sans-serif';
 } 
 
-.main-con a button:hover {
-	cursor: pointer;
+hr.edit {
+	margin-top: 36px;
+	margin-bottom: 0px;
 }
 
-hr  {
-	margin-top: 75px;
-	width: 90%;
-}
-
-.section-con {
+.serv-sec-facts {
 	display: flex;
-	flex-direction: column;
+	justify-content: space-between;
+	margin-top: 40px;
 }
-
-.section1 {
-	display: flex;
-	justify-content: space-evenly;
-	margin-top: 30px;
-}
-@media screen and (max-width: 500px) {
-    .section1 {
+@media screen and (max-width: 500px) { 
+    .serv-sec-facts {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-top: 40px;
     }
 }
-
-.section-con p {
-	line-height: 20px;
-}
-
-.features {
-	margin-left: 70px;
-}
-
-.about {
-	margin-right: 70px;
-	margin-left: 20px;
+.facts-sect {
+	width: 400px;
 }
 @media screen and (max-width: 500px) { 
-    .section-con p {
-        line-height: 20px;
-        margin: 0px;
-        padding: 0px;
-    }
-    .features {
-        margin: 0px 30px;
-    }
-    .about {
-        margin: 25px 30px 0px 30px;
+    .facts-sect {
+        width: auto;
+        margin: 40px 40px 0px 40px;
     }
 }
 
-.content-img {
-	margin-top: 25px;
-	text-align: center;
-}
-@media screen and (max-width: 800px) { 
-    .middle-img {
-        width: 650px;
-        height: auto;
-    }
-}
-@media screen and (max-width: 500px) { 
-    .middle-img {
-        width: 450px;
-        height: auto;
-    }
+.facts-sect p {
+	padding-top: 6px;
 }
 
-.services {
-	margin-left: 50px;
-	padding-left: 20px;
-	padding-right: 20px;
-	margin-top: 10px;
+.facts-sect ul {
+	margin: 15px;
 }
 
-.product {
-	margin-right: 10px;
-	margin-top: 10px;
-}
-.vision {
-	margin-right: 70px;
-	margin-top: 10px;
-}
-
-@media screen and (max-width: 500px) { 
-    .services {
-        margin: 0px 30px;
-        padding: 0px;
-    }
-    
-    .product {
-        margin: 25px 30px 0px 30px;
-    }
-    .vision {
-        margin: 25px 30px 0px 30px;
-    }
-}
-
-.bottom-hr {
-    margin-top: 35px;
-    width: 90%;
-}
-
-.contact-con {
-	display: flex;
-	margin-left: 70px;
-	margin-top: 50px;
-}
-
-@media screen and (max-width: 500px) { 
-    .contact-con {
-        display: flex;
-        margin-left: 30px;
-        margin-top: 50px;
-    }
+.facts-sect ul li {
+	list-style-type: square;
+	padding-top: 18px;
 }
 
 footer {
-	margin-top: 60px;
 	text-align: center;
-	font-size: 14px;
-	margin-bottom: 90px;
+	margin-top: 80px;
+	margin-bottom: 20px;
 }
